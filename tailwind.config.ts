@@ -10,7 +10,8 @@ const config: Config = {
       'geo': ["Noto Sans Georgian", 'sans-serif']
     },
     colors: {
-      'main-color': '#151C50',
+      'main-color': '#2F2F3C',
+      "course-color": "#FF611D",
       'sub-color': '#5F6D91',
       "white": "#FFFFFF",
       "error": "rgba(220, 38, 38, 0.794)",
@@ -24,7 +25,7 @@ const config: Config = {
         "500":"#3b82f6",
         "600":"#2563eb",
         "700":"#1d4ed8",
-        "800":"#1e40af",
+        "800":"#1973E7",
         "900":"#1e3a8a",
         "950":"#172554",
         "btn": "#2463EB"
