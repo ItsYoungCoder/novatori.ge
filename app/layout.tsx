@@ -21,9 +21,9 @@ export default function RootLayout({
       <body className={inter.className}>
    
         <header className="p-5 bg-white flex justify-around">
-          <div className="w-9/12 flex justify-end ">
-              <ul className="flex gap-5 text-main-color text-lg font-medium font-geo items-center">
-                <div className="mr-48">
+          <div className="w-9/12 flex justify-end">
+              <ul className="flex gap-5 text-main-color text-lg font-semibold font-geo items-center">
+                <div className="mr-64">
                   <img src="/NovatoriLogo.svg" alt="" />
                 </div>
                 <li><Link href="/">მთავარი</Link></li>

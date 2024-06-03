@@ -9,6 +9,7 @@ const config: Config = {
     fontFamily: {
       'geo': ["Noto Sans Georgian", 'sans-serif']
     },
+  
     colors: {
       'main-color': '#2F2F3C',
       "course-color": "#FF611D",
