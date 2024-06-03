@@ -13,6 +13,8 @@ const config: Config = {
       'main-color': '#151C50',
       'sub-color': '#5F6D91',
       "white": "#FFFFFF",
+      "error": "rgba(220, 38, 38, 0.794)",
+      "disable": 'rgb(17 24 39)',
       primary: {
         "50":"#eff6ff",
         "100":"#dbeafe",
