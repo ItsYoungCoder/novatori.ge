@@ -4,8 +4,8 @@ import { useState } from "react"
 
 export default () => {
 
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState('')
+    const [firstName, setFirstName] = useState(sessionStorage.getItem('name') || ' ')
+    const [lastName, setLastName] = useState(sessionStorage.getItem('surname') || 'djkshdj')
     const [email, setEmail] = useState('')
     const [pass, setPass] = useState('')
     const [rePass, setRePass] = useState('')
@@ -16,9 +16,11 @@ export default () => {
 
     const onFirstName = (e: any) => {
         setFirstName(e.target.value)
+        sessionStorage.setItem('name', e.target.value)
     }
     const onLastName = (e: any) => {
         setLastName(e.target.value)
+        sessionStorage.setItem('surname', e.target.value)
     }
     const onEmail = (e: any) => {
         setEmail(e.target.value)
@@ -77,12 +79,12 @@ export default () => {
 
                     <div>
                         <label className="block mb-2 text-sm font-medium text-primary-900 font-geo">პაროლი</label>
-                        <input onChange={onPass} type="text" className="my-2 border border-primary-100 text-gray-900 sm:text-sm outline-1 rounded-lg focus:outline-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" placeholder="*******" />
+                        <input onChange={onPass} type="password" className="my-2 border border-primary-100 text-gray-900 sm:text-sm outline-1 rounded-lg focus:outline-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" placeholder="*******" />
                     </div>
 
                     <div>
                         <label className="block mb-2 text-sm font-medium text-primary-900 font-geo">გაიმეორე პაროლი</label>
-                        <input onChange={onRePass} type="text" className="my-2 border border-primary-100 text-gray-900 sm:text-sm outline-1 rounded-lg focus:outline-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" placeholder="********" />
+                        <input onChange={onRePass} type="password" className="my-2 border border-primary-100 text-gray-900 sm:text-sm outline-1 rounded-lg focus:outline-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" placeholder="********" />
                     </div>
                     
                     <div className="flex items-center my-5">

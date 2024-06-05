@@ -31,7 +31,7 @@ export default () => {
                     
                     <div>
                         <label className="block mb-2 text-sm font-medium text-primary-900 font-geo">პაროლი</label>
-                        <input onChange={onPass} type="text" className="my-2 border border-primary-100 text-gray-900 sm:text-sm outline-1 rounded-lg focus:outline-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" placeholder="********" />
+                        <input onChange={onPass} type="password" className="my-2 border border-primary-100 text-gray-900 sm:text-sm outline-1 rounded-lg focus:outline-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" placeholder="********" />
                     </div>
                     
                     {firstName.length < 3 || pass.length < 8 ? (

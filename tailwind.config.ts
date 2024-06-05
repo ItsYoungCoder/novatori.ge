@@ -7,16 +7,22 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      'geo': ["Noto Sans Georgian", 'sans-serif']
+      'geo': ['FiraGO', 'sans-serif'],
+      'geo-sub': ['noto sans georgian', 'Sans-serif']
     },
-  
     colors: {
       'main-color': '#2F2F3C',
       "course-color": "#FF611D",
       'sub-color': '#5F6D91',
+      'sub-back': '#F3F1FB',
       "white": "#FFFFFF",
       "error": "rgba(220, 38, 38, 0.794)",
       "disable": 'rgb(17 24 39)',
+      'green': '#00DD9B',
+      'purple': '#FC7BDF',
+      'aqua': '#01DBF9',
+      'yellow': '#FBB601',
+      'pink': '#7F4CFD',
       primary: {
         "50":"#eff6ff",
         "100":"#dbeafe",
