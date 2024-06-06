@@ -8,7 +8,7 @@ type Props = {
     color: 'pink' | 'red' | 'green';
 }
 export default (props: Props) => {
-    const classes = ['py-7 px-8 text-lg rounded-full border-course-color bg-sub-back']
+    const classes = ['py-7 px-6 text-lg rounded-full border-course-color bg-sub-back']
 
 
     if(props.color === 'pink') {

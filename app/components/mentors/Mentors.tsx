@@ -14,7 +14,7 @@ type Props = {
 export default (props: Props) => {
     return (
                 <div className="border-green flex-1">
-                    <div className="border-course-color w-11/12 translate-y-3 bg-white rounded-lg p-5 hover:translate-y-0 transition delay-75 ease-in-out">
+                    <div className="border-course-color w-11/12 translate-y-2 bg-white rounded-lg p-5 hover:translate-y-0 transition delay-75 ease-in-out">
                         <Link href='/auth/signup'>
                             <div>
                                 <img src={props.image} className="rounded-lg" />

@@ -1,10 +1,14 @@
+import Link from "next/link"
+import Button from "./components/regButton/Button"
+
 export default () => {
     return (
-        <div className="flex justify-center items-center h-96 font-geo my-44">
-            <div className="text-center">
-                <h1 className="text-4xl mb-5 text-main-color">გვერდი ვერ მოიძებნა :( </h1>
-                <sub className="text-lg text-sub-color">გთხოვთ დაბრუნდეთ მთავარ გვერდზე და განაგრძოთ ძიება </sub>
-            </div>
+        <div className="flex flex-col items-center justify-center min-h-full p-20">
+            <h1 className="text-6xl font-bold text-red-600 mb-4"><img src="/404.svg" alt="" /></h1>
+            <p className="text-1xl text-main-color font-semibold font-geo-sub">გვერდი ვერ მოიძებნა</p>
+            <Link href="/" className="text-base rounded-lg mt-10">
+                <Button title="მთავარ გვერდზე დაბრუნება" />
+            </Link>
         </div>
     )
 }

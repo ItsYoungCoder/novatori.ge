@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBriefcase, faChalkboardUser, faComputer, faGraduationCap, faLanguage, faLaptop, faSchoolCircleCheck, faUserPen } from "@fortawesome/free-solid-svg-icons";
+import { faBriefcase, faChalkboardUser, faChevronDown, faComputer, faGraduationCap, faLanguage, faLaptop, faSchoolCircleCheck, faUserPen } from "@fortawesome/free-solid-svg-icons";
 
 import CardInfo from "./components/cardMenu/CardInfo";
 import Button from "./components/regButton/Button";
@@ -7,10 +7,14 @@ import LectionCard from "./components/lectionsCard/LectionCard";
 import HowToCard from "./components/HowToCard/HowToCard";
 import HowToTitle from "./components/HowToTitle/HowToTitle";
 import Mentors from "./components/mentors/Mentors";
+import Question from "./components/question/Question";
+import BlogHome from "./components/Blog-Home/Blog.home";
+import Link from "next/link";
 
 export default function Home() {
+  
   return (
-    <div>
+      <div>
 
         <main className="h-100 flex justify-center">
           <img className="bg-cover w-full" src="/sprinkles.svg" alt="" />
@@ -20,7 +24,9 @@ export default function Home() {
               <div className="mt-5">
                 <sub className="flex text-center font-geo-sub items-center justify-center text-sub-color text-lg m-auto font-medium">აირჩიე პროფესიული გადამზადების სრული კურსი, ისწავლე ახალი ტექნოლოგიები, გაიუმჯობესე სასაუბრო ინგლისური და მოემზადე შენი პირველი გასაუბრებისთვის.</sub>
               </div>
-                <Button title="დარეგისტრირდი" />
+                <div className="mt-10">
+                  <Button title="დარეგისტრირდი" />
+                </div>
             </div>
         </main>
 
@@ -74,11 +80,11 @@ export default function Home() {
 
           </div>
 
-          <div className="h-100 w-5/6 m-auto">
+          <div className=" w-5/6 m-auto">
               <div className="w-5/6 m-auto">
 
                 <div className="border-course-color w-2/6 mt-40">
-                  <span className="font-geo text-4xl font-bold">ჩვენი <span className="text-pink">კურსები</span></span>
+                  <span className="font-geo text-4xl font-bold text-main-color">ჩვენი <span className="text-pink font-normal">კურსები</span></span>
                 </div>
 
                 <div className="mt-10 grid grid-cols-3">
@@ -88,6 +94,48 @@ export default function Home() {
                 </div>
               </div>
           </div>
+
+
+          <div className="w-5/6 m-auto">
+              <div className="w-5/6 m-auto">
+
+                <div className="border-course-color mt-40">
+                  <span className="font-geo text-4xl font-bold text-main-color">ხშირად დასმული <span className="text-primary-800 font-normal">კითხვები</span></span>
+                </div>
+                  <Question title="რატომ არის ნოვატორის კურსები ბევრად ხანგრძლივი სხვებთან შედარებით?" desc="ნოვატორის ყველა კურსის დანიშნულება პროფესიული მომზადება ან გადამზადებაა. იმისათვის, რომ ხარისხიანად დაეუფლო ახალ პროფესიას, ცხადია, რომ ამისათვის 1-2 თვე საკმარისი ვერ იქნება" />
+                  <Question title="რა არის საშუალო ანაზღაურება ციფრულ ინდუსტრიაში?" desc="ციფრული ინდუსტრია ერთერთ ყველაზე მაღალანაზღაურებად სფეროდ ითვლება მთელ მსოფლიოში. ტალანტები ქართულ ბაზარზე, 1,000-დან 20,000 ლარამდე გამოიმუშავებენ, გამოცდილების შესაბამისად. სტატისტიკურად, 2-წლიანი კარიერის შემდეგ, შემოსავალი 5-7 ათას ლარს უტოლდება; ხოლო ამერიკისა და ევროპის დასაქმების ბაზარზე, ქართველი ტალანტების ანაზღაურება 20,000 დოლარსაც აღწევს." />
+                  <Question title="შევძლებ თუ არა დისტანციურად სწავლას?" desc="აბსოლუტურად ყველა შეხვედრა ონლაინ რეჟიმში ჩატარდება. ასევე, ფიზიკურ შეხვედრებში ონლაინ ჩართვა შეგეძლება, თუკი ადგილზე მოსვლას ვერ შეძლებ. გარდა ამისა, ყველა შეხვედრა ჩაიწერება და ჩვენს ვებგვერდზე განთავსდება." />
+                  <Question title="არის თუ არა საჭირო დიპლომი სამსახურის დასაწყებად?" desc="არა თუ მცირე და საშუალო ბიზნესები, არამედ ტექნოლოგიური გიგანტებიც კი, როგორებიც არიან Apple და Google, გასაუბრებაზე დიპლომს არ ითხოვენ." />
+                  <Question title="რა ცოდნაა საჭირო ნოვატორში სწავლის დასაწყებად?" desc="Სწავლის დასაწყებად წინაპირობები არ გვაქვს, რადგან ჩვენი ყველა კურსი პროფესიულ მომზადებაზე არის ორიენტირებული. ახალი პროფესიის ათვისება კი, ჩვენთვის, მისი საფუძვლების ხარისხიან შესწავლას ნიშნავს. ამიტომაც, ნოვატორის რჩევაა, მენტორის მიერ ახსნილ საკითხს კარგადაც რომც იცნობდე, იფიქრე, ამჯერად, შანსი გაქვს, ახლებურად შეხედო მას." />
+                  <Question title="ცოდნის დამადასტურებელ ცნობას თუ გასცემთ?" desc="Რა თქმა უნდა! კურსის წარმატებით დასრულების შემდეგ, გაიცემა სერთიფიკატი, როგორც ბეჭდურ, ისე ციფრულ ფორმატში, რომელიც ჩვენს ვებგვერდეც იქნება ხელმისაწვდომი." />
+              </div>
+          </div>
+
+        
+            <div className=" w-5/6 m-auto">
+              <div className="w-5/6 m-auto">
+
+                <div className="border-course-color mt-40">
+                  <span className="font-geo text-4xl font-bold text-main-color">გაიგე მეტი <span className="text-primary-800 font-normal">ციფრულ სამყაროზე</span></span>
+                </div>
+
+                <div className="mt-10 grid grid-cols-3 gap-5">
+                  <BlogHome image={'/gemni.png'} title="Google I/O 2024: Gemini-ს განახლებები" desc="ჩაანაცვლებს ხელოვნური ინტელექტი ადამიანს? ალბათ ეს კითხვა მთელი კაცობრიობისთვის დღემდე პასუხგაუცემელი რჩება, თუმცა ფაქტი ერთია-" />
+                  <BlogHome image={'/modern.webp'} title="კარიერა ციფრულ სფეროში |  პირველი ნაბიჯები" desc="ციფრული ტექნოლოგიები სწრაფად ვითარდება და ყოველდღიურად იჭრება ჩვენს ცხოვრებასა და ბიზნესში, შესაბამისად კარიერა ციფრულ სფეროში" />
+                  <BlogHome image={'/marketing.webp'} title="რა არის ციფრული მარკეტინგული სტრატეგია?" desc="თანამედროვე ციფრულ სამყაროში ბიზნესის წარმატებისთვის აუცილებელია ეფექტური ციფრული მარკეტინგული სტრატეგია. ციფრული მარკეტინგული სტრატეგიის შედგენა ციფრული" />
+                </div>
+                <div className="flex justify-end mt-10">
+                    <Button title="მეტი ბლოგი" />
+                </div>
+
+              </div>
+            </div>
+
+
+
+
+
+            
 
       </div>
 
